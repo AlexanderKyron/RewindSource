@@ -82,26 +82,8 @@ Player death.
 */
 void URewindHealthComponent::Die()
 {
-	//Find the owning player and their movement.
-	/*AActor* MyOwner;
-	ARewindCharacter* MyChar;
-	UCharacterMovementComponent* MyMovement;
-
-	MyOwner = GetOwner();
-	MyChar = Cast <ARewindCharacter>(MyOwner);
-	if (MyChar)
-	{	//Disable all movement and input to the player that could be player driven
-		MyChar->DisableInput(Cast<APlayerController>(MyChar->GetController()));
-		MyMovement = MyChar->GetCharacterMovement();
-		if (MyMovement)
-		{
-			MyMovement->StopMovementImmediately();
-			MyMovement->DisableMovement();
-		}
-	}*/
-	//Set is dead boolean to let the players and servers know that the player is dead
+	
 	bIsDead = true;
-	//Trigger blueprint death event
 	OnDeath.Broadcast();
 }
 
