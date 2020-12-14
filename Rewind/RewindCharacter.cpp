@@ -175,6 +175,11 @@ void ARewindCharacter::StopSprinting()
 		UE_LOG(LogTemp, Warning, TEXT("mComp = nullptr | AFPSGameCharacter::StopSprinting()"));
 	}
 }
+
+//TODO: MAKE THIS ACTUALLY SANE. I do not know why I did it like this. I think it was the last bit of the jam and 
+//I was running out of redbull.
+//Either way I need to change this to use the delta Z of input rotation & pawn rotation and selet the most appropriate
+//animation that way.
 void ARewindCharacter::Roll()
 {
 	if (!bIsCutscene)
